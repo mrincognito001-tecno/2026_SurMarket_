@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SurMarket"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#1683E6</item>
+        <item name="colorPrimaryVariant">#126FC4</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#1683E6</item>
+        <item name="colorSecondaryVariant">#126FC4</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="android:statusBarColor">#F7F9FB</item>
+        <item name="android:navigationBarColor">#F7F9FB</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+</resources>
