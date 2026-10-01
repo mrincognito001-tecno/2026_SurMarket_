@@ -13,7 +13,7 @@
         android:paddingStart="20dp"
         android:paddingTop="24dp"
         android:paddingEnd="20dp"
-        android:paddingBottom="18dp">
+        android:paddingBottom="48dp">
 
         <TextView
             android:id="@+id/TXVLoginTitle"
