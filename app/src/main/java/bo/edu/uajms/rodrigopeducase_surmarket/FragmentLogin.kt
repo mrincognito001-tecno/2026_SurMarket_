@@ -33,61 +33,88 @@ class FragmentLogin : Fragment() {
     }
 
     private fun initializeViews(view: View) {
-        ETX_FRGLogin_UserName = view.findViewById(R.id.ETX_FRGLogin_UserName)
-        ETX_FRGLogin_Password = view.findViewById(R.id.ETX_FRGLogin_Password)
-        TXV_FRGLogin_RecoverPassword = view.findViewById(R.id.TXV_FRGLogin_RecoverPassword)
-        BTN_FRGLogin_Login = view.findViewById(R.id.BTN_FRGLogin_Login)
-        BTN_FRGLogin_Register = view.findViewById(R.id.BTN_FRGLogin_Register)
+        ETX_FRGLogin_UserName =
+            view.findViewById(R.id.ETX_FRGLogin_UserName)
+
+        ETX_FRGLogin_Password =
+            view.findViewById(R.id.ETX_FRGLogin_Password)
+
+        TXV_FRGLogin_RecoverPassword =
+            view.findViewById(R.id.TXV_FRGLogin_RecoverPassword)
+
+        BTN_FRGLogin_Login =
+            view.findViewById(R.id.BTN_FRGLogin_Login)
+
+        BTN_FRGLogin_Register =
+            view.findViewById(R.id.BTN_FRGLogin_Register)
     }
 
     private fun configureListeners() {
-        TXV_FRGLogin_RecoverPassword.setOnClickListener() {
+        TXV_FRGLogin_RecoverPassword.setOnClickListener {
 
         }
-        BTN_FRGLogin_Login.setOnClickListener() {
+
+        BTN_FRGLogin_Login.setOnClickListener {
             SignIn()
         }
-        BTN_FRGLogin_Register.setOnClickListener() {
+
+        BTN_FRGLogin_Register.setOnClickListener {
 
         }
     }
 
-    private fun SignIn(){
+    private fun SignIn() {
         val user = ETX_FRGLogin_UserName.text.toString().trim()
         val password = ETX_FRGLogin_Password.text.toString().trim()
-        if (!verifyIntegrity(user,password))
-        {
+
+        if (!verifyIntegrity(user, password)) {
             return
         }
-        if (verifyCredentials(user,password)){
-            Toast.makeText(requireContext(), getString(R.string.LoginWelcome), Toast.LENGTH_SHORT).show()
-        }
-        else
-        {
-            Toast.makeText(requireContext(), getString(R.string.LoginError), Toast.LENGTH_SHORT).show()
+
+        if (verifyCredentials(user, password)) {
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.LoginWelcome),
+                Toast.LENGTH_SHORT
+            ).show()
+        } else {
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.LoginError),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
-    private fun verifyIntegrity(user: String, password: String): Boolean {
+    private fun verifyIntegrity(
+        user: String,
+        password: String
+    ): Boolean {
         var res = true
-        if (user.isEmpty()){
-            ETX_FRGLogin_UserName.error = getString(R.string.userEmpty)
-        }
-        else
-        {
+
+        if (user.isEmpty()) {
+            ETX_FRGLogin_UserName.error =
+                getString(R.string.userEmpty)
+            res = false
+        } else {
             ETX_FRGLogin_UserName.error = null
         }
-        if (password.isEmpty()){
-            ETX_FRGLogin_Password.error = getString(R.string.passwordEmpty)
-        }
-        else
-        {
+
+        if (password.isEmpty()) {
+            ETX_FRGLogin_Password.error =
+                getString(R.string.passwordEmpty)
+            res = false
+        } else {
             ETX_FRGLogin_Password.error = null
         }
+
         return res
     }
 
-    private fun verifyCredentials(user: String, password: String): Boolean {
-        return user=="mecha" && password=="0406elit"
+    private fun verifyCredentials(
+        user: String,
+        password: String
+    ): Boolean {
+        return user == "mecha" && password == "0406elit"
     }
 }
