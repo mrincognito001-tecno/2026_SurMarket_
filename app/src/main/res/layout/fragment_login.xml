@@ -1,117 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F7F9FB"
-    android:fillViewport="true">
-
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="24dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="48dp">
-
-        <TextView
-            android:id="@+id/TXVLoginTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/Logintitle"
-            android:textColor="#151A22"
-            android:textSize="@dimen/titleTextSize"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/TXVUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="Nombre de usuario"
-            android:textColor="#20242A"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/EDTUsername"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/login_input_background"
-            android:hint="Ingresa tu nombre de usuario"
-            android:inputType="text"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:singleLine="true"
-            android:textColor="#20242A"
-            android:textColorHint="#6687A8"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/TXVPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:text="Contraseña"
-            android:textColor="#20242A"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/EDTPassword"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/login_input_background"
-            android:hint="Ingresa tu contraseña"
-            android:inputType="textPassword"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:singleLine="true"
-            android:textColor="#20242A"
-            android:textColorHint="#6687A8"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/TXVRecoverPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:gravity="center_vertical"
-            android:text="Recuperar contraseña"
-            android:textColor="#6687A8"
-            android:textSize="14sp" />
-
-        <Space
+        android:padding="@dimen/FRGContainerPadding">
+        <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/BTNLogin"
+        <TextView
+            android:id="@+id/TXV_FRGLogin_Title"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:background="@drawable/login_primary_button"
-            android:backgroundTint="@null"
-            android:text="Iniciar sesión"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/FRGLogin_Title"
+            android:textSize="@dimen/FRGTitleTextSize"
             android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/BTNRegister"
+        <TextView
+            android:id="@+id/TXV_FRGLogin_UserName"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/login_secondary_button"
-            android:backgroundTint="@null"
-            android:text="Regístrate aquí"
-            android:textAllCaps="false"
-            android:textColor="#151A22"
-            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="@string/FRGLogin_TXVUserName"
+            android:textSize="@dimen/FRGLabelTextSize" />
+        <EditText
+            android:id="@+id/ETX_FRGLogin_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/FRGLogin_ETXUserName"
+            android:inputType="text"
+            android:textSize="@dimen/FRGEditTextTextSize" />
+        <TextView
+            android:id="@+id/TXV_FRGLogin_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/FRGLogin_TXVPassword"
+            android:textSize="@dimen/FRGLabelTextSize" />
+        <EditText
+            android:id="@+id/ETX_FRGLogin_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/FRGLogin_ETXPassword"
+            android:inputType="textPassword"
+            android:textSize="@dimen/FRGEditTextTextSize" />
+        <TextView
+            android:id="@+id/TXV_FRGLogin_RecoverPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/FRGLogin_TXVRecoverPassword"
+            android:textSize="@dimen/FRGTextView2TextSize" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+        <Button
+            android:id="@+id/BTN_FRGLogin_Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/FRGLogin_BTNLogin"
+            android:textSize="@dimen/FRGButtonTextSize"
             android:textStyle="bold" />
-
+        <Button
+            android:id="@+id/BTN_FRGLogin_Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/FRGLogin_BTNRegister"
+            android:textSize="@dimen/FRGButtonTextSize"
+            android:textStyle="bold" />
     </LinearLayout>
-
 </ScrollView>

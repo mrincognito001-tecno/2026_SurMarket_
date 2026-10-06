@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    namespace = "bo.edu.uajms.rodrigopeducase.surmarket"
+    namespace = "bo.edu.uajms.rodrigopeducase_surmarket"
 
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "bo.edu.uajms.rodrigopeducase.surmarket"
+        applicationId = "bo.edu.uajms.rodrigopeducase_surmarket"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+
     val nav_version = "2.10.2"
 
     implementation(libs.androidx.activity.ktx)

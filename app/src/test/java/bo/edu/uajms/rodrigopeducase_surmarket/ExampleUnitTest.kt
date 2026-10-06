@@ -1,4 +1,4 @@
-package bo.edu.uajms.rodrigopeducase.surmarket
+package bo.edu.uajms.rodrigopeducase_surmarket
 
 import org.junit.Test
 
