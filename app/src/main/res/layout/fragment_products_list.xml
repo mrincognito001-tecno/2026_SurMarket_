@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FB"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TXV_FRGProductsList_Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tienda Virtual SurMarket"
+            android:textColor="#151A22"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/IMB_FRGProductsList_ShoppingCart"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Carrito de compras"
+            android:padding="11dp"
+            android:src="@drawable/ic_shopping_cart"
+            app:tint="#151A22" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#E8EDF2"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:contentDescription="Buscar"
+                android:padding="12dp"
+                android:src="@drawable/ic_search"
+                app:tint="#6687A8" />
+
+            <EditText
+                android:id="@+id/ETX_FRGProductsList_Search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Buscar producto"
+                android:inputType="text"
+                android:paddingEnd="16dp"
+                android:singleLine="true"
+                android:textColor="#20242A"
+                android:textColorHint="#6687A8" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/BTN_FRGProductsList_AddProduct"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#A970E8"
+        android:text="Añadir producto"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
